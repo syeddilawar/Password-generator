@@ -1,7 +1,7 @@
 
 // Assignment Code
 var l;
-
+var passwordLength;
 var specialCharacters = [
   '@', '%', '+', '\\', '/', "'", '!', '#', '$', '^', '?', ':', ',', ')', '(', '}', '{', ']', '[', '~', '-', '_', '.'];
 
@@ -18,7 +18,7 @@ var upperCasedCharacters = [
   'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 
 var generateBtn = document.querySelector("#generate");
-// writePassword();
+
 
 // Function for getting a random element from an array
 function getRandom(arr) {
@@ -30,42 +30,43 @@ function getRandom(arr) {
     return randElement;
   }
 }
-// function requestLength() {
-//   l = parseInt(
-//     prompt('How many characters would you like your password to contain?')
-//   );
 
-//   console.log(l);
-
-// }
-
+writePassword();
 
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-  let passwordLength = parseInt(
-    prompt('select length of password in numbers between 8 to 128.')
-  );
+
+
   var lowercase = confirm('include lowercase');
   var uppercase = confirm('include uppercase');
   var number = confirm('include number');
   var speicalcharacter = confirm('include speicalcharacter');
 
+  var pw = document.getElementById("password").value;
 
-  passwordText.value = password;
+
 
 }
 
-//create a RTANDOM password!
+//create a RANDOM password!
 function generatePassword() {
   //between 8 and 128 characters
 
   var pw = [];
 
 
+  passwordLength = prompt('select length of password in numbers between 8 to 128.');
+
+  document.getElementsByClassName("pw-length").value = passwordLength;
+
+  console.log("password length is " + passwordLength);
+  //retrieves the user input for password lnegth
+  var length = document.getElementsByClassName("pw-length").value;
+
+  console.log(length);
   //generate the correct amount of characters for the password depending on requestLength()
-  for (var i = 0; i < 2; i++) {
+  for (var i = 0; i < length / 4; i++) {
     var letter = getRandom(lowerCasedCharacters);
 
 
@@ -81,9 +82,12 @@ function generatePassword() {
     pw.push(letterCaps);
     pw.push(number);
     pw.push(specialCharacter);
+
   }
 
-  console.log(pw);
+  document.getElementById("password").value = pw.join('');
+
+  console.log(pw.join(''));
 
 }
 
