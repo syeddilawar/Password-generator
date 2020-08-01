@@ -32,7 +32,7 @@ This project have 3 files
 ## Github URL
 https://github.com/syeddilawar
 
-## Linkedin 
+## Linkedin URL
 www.linkedin.com/in/wasim-dilawer-4280a195
 
 
