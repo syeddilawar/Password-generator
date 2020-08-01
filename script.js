@@ -1,5 +1,4 @@
 // Assignment Code
-var l;
 var passwordLength;
 var specialCharacters = [
   "@",
@@ -98,6 +97,8 @@ function getRandom(arr) {
 function writePassword() {
   var password = generatePassword();
   var lowercase = confirm("include lowercase");
+  if (lowerCasedCharacters === true) {
+  }
   var uppercase = confirm("include uppercase");
   var number = confirm("include number");
   var speicalcharacter = confirm("include speicalcharacter");
