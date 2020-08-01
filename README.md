@@ -29,6 +29,11 @@ This project have 3 files
 
 <img width="804" alt="Screen Shot 2020-07-31 at 10 41 35 PM" src="https://user-images.githubusercontent.com/66503170/89095614-9fe5c200-d384-11ea-8125-ad03730365f2.png">
 
+## Github URL
+https://github.com/syeddilawar
+
+## Linkedin 
+www.linkedin.com/in/wasim-dilawer-4280a195
 
 
 
