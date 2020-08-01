@@ -94,7 +94,6 @@ function getRandom(arr) {
     return randElement;
   }
 }
-writePassword();
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
@@ -136,10 +135,8 @@ function generatePassword() {
   document.getElementById("password").value = pw.join("");
   console.log(pw.join(""));
 }
-
 function generateLowerCase() {
   //select lowercase letter
 }
-
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
